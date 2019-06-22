@@ -7,3 +7,4 @@ services:
             - "8888:8888"
         volumes:
             - ./docker/nginx/conf:/etc/nginx/conf.d:ro
+            - ./Visualization/www:/var/www:ro
