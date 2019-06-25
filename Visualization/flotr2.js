@@ -7,12 +7,16 @@ var years = [
 		
 window.onload = function(){
 	Flotr.draw(
-		document.getElementById("chart"),
-		wins,
-		{
+		document.getElementById("chart"), wins,{
+			title: "Manchester City Wins!",
+			colors: ["#89AFD2"],
+
 			bars: {
 				show: true,
-				barWidth: 0.5
+				barWidth: 0.5,
+				shadowSize: 0,
+				fillOpacity: 1,
+				lineWidth: 0
 			},
 			yaxis: {
 				min: 0,
@@ -20,6 +24,10 @@ window.onload = function(){
 			},
 			xaxis: {
 				ticks: years
+			},
+			grid: {
+				horizontalLines: false,
+				verticalLines: false
 			}
 		}
 	)
